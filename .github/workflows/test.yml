@@ -45,10 +45,10 @@ jobs:
       - name: Run Database Migrations
         # We pass the DATABASE_URL dynamically so node-pg-migrate knows where to connect
         env:
-          DATABASE_URL: postgres://testuser:testpassword@localhost:5432/demo-ci
+          DATABASE_URL: postgres://postgres:lantenweid@localhost:5432/demo-ci
         run: npm run migrate up
 
       - name: Run Tests
         env:
-          DATABASE_URL: postgres://testuser:testpassword@localhost:5432/demo-ci
+          DATABASE_URL: postgres://postgres:lantenweid@localhost:5432/demo-ci
         run: npm test
